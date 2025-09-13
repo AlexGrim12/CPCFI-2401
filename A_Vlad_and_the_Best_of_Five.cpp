@@ -4,11 +4,19 @@ using namespace std;
 
 void solve()
 {
-    long long n, a = 0;
-    cin >> n;
-    while (n > 9)
-        n -= 9, a += 9 + n % 10, n /= 10;
-    cout << a + n;
+    // Add your solution here
+    int a = 0, b = 0;
+    char tmp;
+    for (int i = 0; i < 5; i++)
+    {
+        cin >> tmp;
+        if (tmp == 'A')
+            a++;
+        else
+            b++;
+    }
+
+    cout << ((a > b) ? 'A' : 'B') << endl;
 }
 
 int main()
@@ -17,7 +25,7 @@ int main()
     cin.tie(0);
     cout.tie(0);
     int tc = 1;
-    // cin >> tc;
+    cin >> tc;
     for (int t = 1; t <= tc; t++)
     {
         // cout << "Case #" << t << ": ";

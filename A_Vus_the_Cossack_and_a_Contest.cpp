@@ -4,11 +4,13 @@ using namespace std;
 
 void solve()
 {
-    long long n, a = 0;
-    cin >> n;
-    while (n > 9)
-        n -= 9, a += 9 + n % 10, n /= 10;
-    cout << a + n;
+    // Add your solution here
+    int a, b, c;
+    cin >> a >> b >> c;
+    if (a <= b && a <= c)
+        cout << "Yes" << endl;
+    else
+        cout << "No" << endl;
 }
 
 int main()

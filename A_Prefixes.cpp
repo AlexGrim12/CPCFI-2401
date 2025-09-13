@@ -4,11 +4,19 @@ using namespace std;
 
 void solve()
 {
-    long long n, a = 0;
+    // Add your solution here
+    int n, ans = 0;
     cin >> n;
-    while (n > 9)
-        n -= 9, a += 9 + n % 10, n /= 10;
-    cout << a + n;
+    string s;
+    cin >> s;
+    for (int i = 0; i < n - 1; i += 2)
+    {
+        if (s[i] - s[i + 1] == 0)
+            s[i] = 'a' + 'b' - s[i], ans++;
+    }
+
+    cout << ans << endl
+         << s << endl;
 }
 
 int main()
